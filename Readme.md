@@ -33,18 +33,24 @@ PEM-Wrapper depends on:
 
 # Build
 
-1. Get a copy of PEM-wrapper
+- Get a copy of PEM-wrapper
     
     git clone https://github.com/pppoe/PEM-Wrapper
     
-1. Edit the Makefile, 
-1. Build executable file
+- Edit the Makefile, 
+- Build executable file
 
-	$cd PEM-Wrapper
-	$make
-	$ls bin/*/wrapper_main	
+```
+
+    $cd PEM-Wrapper
+    $make
+    $ls bin/*/wrapper_main
+    
+```
 	
-1. Assume we are under Linux OS, binray file wrapper_main is under bin/linux/
+- Assume we are under Linux OS, binray file wrapper_main is under bin/linux/
+
+```
 
     $./bin/linux/wrapper_main
     Allowed options:
@@ -58,6 +64,8 @@ PEM-Wrapper depends on:
     Possible combinations:
     ./main -m pem-path -s score-path -t config-path (training)
     ./main -m pem-path -s score-path -p image-path1 image-path2 ... (testing)
+
+```
 
 # Usage
 
