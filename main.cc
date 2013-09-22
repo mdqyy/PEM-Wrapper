@@ -67,8 +67,8 @@ int main(int argc, char **argv) {
         } else {
             cout << desc << endl;
             cout << "Possible combinations: \n";
-            cout << "./main -m pem-path -s score-path -t config-path" << endl;
-            cout << "./main -m pem-path -s score-path -p image-path1 image-path2 ..." << endl;
+            cout << "./main -m pem-path -s score-path -t config-path (training)" << endl;
+            cout << "./main -m pem-path -s score-path -p image-path1 image-path2 ... (testing)" << endl;
             exit(-1);
         }
     } catch (std::exception& e) {
