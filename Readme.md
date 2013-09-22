@@ -6,6 +6,7 @@ Please feel free to use it for your research. More functionalities may be expose
 For details of PEM, please refer to our paper:
 [Probabilistic Elastic Matching for Pose Variant Face Verification](http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Li_Probabilistic_Elastic_Matching_2013_CVPR_paper.pdf)
 
+```
 @InProceedings{Li_2013_CVPR,
 author = {Haoxiang Li and Gang Hua and Zhe Lin and Jonathan Brandt and Jianchao Yang},
 title = {Probabilistic Elastic Matching for Pose Variant Face Verification},
@@ -13,6 +14,7 @@ journal = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
 month = {June},
 year = {2013}
 }
+```
 
 # Components
 
