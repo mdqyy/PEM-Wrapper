@@ -30,8 +30,8 @@ PEM-Wrapper depends on:
 
 1. gnu/g++ verision >= 4.6
 1. Math Kernel Library: There are [non-commercial license for MKL](http://software.intel.com/en-us/non-commercial-software-development).
-1. [OpenCV](http://opencv.org/).
-1. [Boost](http://www.boost.org/) (filesystem system program_options)
+1. [OpenCV](http://opencv.org/) >= 2.4.
+1. [Boost](http://www.boost.org/) (filesystem system program_options) >= 1.48
 
 # Build
 
