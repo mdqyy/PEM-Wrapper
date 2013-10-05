@@ -24,10 +24,10 @@ ELSE()
     return()
 ENDIF()
 
-find_package(OpenCV)
+find_package(OpenCV REQUIRED)
 IF(OpenCV_FOUND)
-    message("...using OpenCV")
-    include_directories(${OpenCV_INCLUDE_DIR})
+    message("...using OpenCV ${OpenCV_VERSION}")
+    include_directories(${OpenCV_INCLUDE_DIRS})
 ELSE()
     message("OpenCV is not found. You must install OpenCV")
     # exit early 
@@ -53,18 +53,18 @@ include_directories (
 
 set (PEM_LIB ${CMAKE_SOURCE_DIR}/lib/linux/)
 if (APPLE) 
-    set (PEM_LIB ${CMAKE_SOURCE_DIR}/lib/mac/)
+    message("Error: Mac OS X version is upon request")
+    return()
 endif()
 link_directories (
     ${PEM_LIB}
     $ENV{MKLROOT}/lib/intel64 
     $ENV{OPENCVROOT}/lib)
 set (LD_FLAGS_MKL mkl_intel_lp64 mkl_intel_thread mkl_core iomp5)
-set (LD_FLAGS_OPENCV opencv_core opencv_imgproc opencv_highgui opencv_ml opencv_video opencv_features2d opencv_calib3d opencv_objdetect opencv_contrib opencv_legacy opencv_flann)
 
 # binaries
 add_executable (wrapper_main main.cc)
 target_link_libraries (wrapper_main mp_wrapper
     ${LD_FLAGS_MKL} 
-    ${LD_FLAGS_OPENCV} 
+    ${OpenCV_LIBS} 
     ${LD_FLAGS_BOOST})
