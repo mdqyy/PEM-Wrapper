@@ -257,5 +257,7 @@ Set ``[withloc-bool]`` to be "yes" will extract spatial-augmented features.
 ``[locfactor-value]`` is the scaling factor the spatial part of the spatial-augmented features.
 
 	
- 
+# Credits to 3rd-Party Libraries
+
+PEM utilized [Vlfeat](http://www.vlfeat.org/) and [Libsvm](http://www.csie.ntu.edu.tw/~cjlin/libsvm/), awesome work!
   
