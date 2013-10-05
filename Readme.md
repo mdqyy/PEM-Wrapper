@@ -16,6 +16,11 @@ year = {2013}
 }
 ```
 
+# Links
+
+A PEM model pre-trained with partial LFW-funneled is shared here (1.6GB) [PEM model](http://sdrv.ms/1bzpE7k). 
+If you have no idea of what a PEM model is, please continue reading :)
+
 # Components
 
 PEM-Wrapper contains: 
