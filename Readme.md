@@ -94,6 +94,38 @@ In addition to the two arguments (-m -s), add the -p argument
 
 Image pairs (image-path1 vs image-path2) and (image-path3 vs image-path4) will be tested by the PEM-pipeline.
 
+# File-Format
+
+After running a full PEM-pipeline, there will be two files generated for each image file.
+
+## .feature_mp file
+This is the file which contains extracted feature descriptors, make sure you removed them before 
+re-extracting features.
+
+## .measure_mp file
+This is the file which contains the concatenated appearance descriptors as a per-image representation.
+You can easily read this binary file for your own usage.
+
+The file format is mostly a stack of floating values with a long int value at the beginning describing 
+the number of floating values.
+
+```
+
+    [long int]
+    [float] [float] [float] ...
+
+```
+
+You reading code for .measure_mp could be (un-tested)
+
+```
+    vector<float> measure;
+    long len;
+    ifs.read((char*)&len, sizeof(long));
+    measure.resize(len);
+    ifs.read((char*)&measure.data(), sizeof(float)*len);
+```
+
 # Demo
 
 Details of configuration file will be explained later.
