@@ -298,3 +298,6 @@ Set ``[withloc-bool]`` to be "yes" will extract spatial-augmented features.
 
 PEM utilized [Vlfeat](http://www.vlfeat.org/) and [Libsvm](http://www.csie.ntu.edu.tw/~cjlin/libsvm/), awesome work!
   
+# LICENSE
+
+Usage of copy of this software is restricted to research purpose only. All rights reserved.
